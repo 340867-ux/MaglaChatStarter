@@ -1,0 +1,10 @@
+{
+  "name": "magla-chat-starter",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Local-first browser extension for one-click chat starter messages",
+  "scripts": {
+    "test": "node tests/core.test.cjs && node scripts/validate.mjs",
+    "build": "node scripts/build.mjs"
+  }
+}
