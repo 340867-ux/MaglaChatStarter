@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "MAGLA Chat Starter",
+  "version": "0.1.0",
+  "description": "Вставляет настраиваемое первое сообщение в пустой чат одним нажатием.",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "magla-chat-starter@magla.app",
+      "strict_min_version": "128.0"
+    }
+  },
+  "action": {
+    "default_title": "MAGLA Chat Starter",
+    "default_popup": "popup.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*"
+      ],
+      "js": ["core.js", "storage.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
