@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MAGLA Chat Starter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="wrap">
+    <h1>MAGLA Chat Starter</h1>
+    <p class="muted">Вставляет первое сообщение в пустой чат. Сам не отправляет.</p>
+    <button id="insert" class="primary">Вставить старт</button>
+    <p id="status" class="status" role="status"></p>
+    <div class="preview-label">Предпросмотр</div>
+    <pre id="preview" class="preview"></pre>
+    <button id="settings" class="link-button">Настроить шаблон</button>
+    <p class="privacy">Локально: без истории чатов, сети и аналитики.</p>
+  </main>
+  <script src="core.js"></script>
+  <script src="storage.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
